@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rohit Kumar - Data Analyst Portfolio">
+  <title>Rohit Kumar | Data Analyst Portfolio</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#172033;background:#f7f9fc}
+    a{text-decoration:none;color:inherit}
+    nav{position:sticky;top:0;z-index:10;background:#111827;color:#fff;padding:16px 7%;display:flex;justify-content:space-between;align-items:center}
+    nav .logo{font-size:21px;font-weight:700}
+    nav .links{display:flex;gap:22px;font-size:14px}
+    nav .links a:hover{color:#93c5fd}
+    .hero{min-height:78vh;display:flex;align-items:center;padding:70px 7%;background:linear-gradient(135deg,#111827,#1e3a5f)}
+    .hero-content{max-width:850px;color:#fff}
+    .tag{display:inline-block;background:#2563eb;padding:7px 13px;border-radius:20px;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(42px,7vw,72px);line-height:1.05;margin-bottom:18px}
+    .hero p{font-size:20px;max-width:680px;color:#dbeafe;margin-bottom:28px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:8px;background:#fff;color:#111827;font-weight:700;margin-right:10px}
+    .btn.secondary{background:transparent;color:#fff;border:1px solid #93c5fd}
+    section{padding:70px 7%}
+    .section-title{font-size:32px;margin-bottom:10px}
+    .section-subtitle{color:#64748b;margin-bottom:30px}
+    .about{max-width:850px;font-size:17px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:25px;box-shadow:0 8px 25px rgba(15,23,42,.06)}
+    .card h3{margin-bottom:10px;font-size:21px}
+    .card p{color:#64748b}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .skill{background:#e8f0fe;color:#1d4ed8;padding:8px 13px;border-radius:20px;font-size:14px}
+    .project{display:flex;flex-direction:column;gap:12px}
+    .project .tools{font-size:13px;color:#2563eb;font-weight:700}
+    .project .button{margin-top:auto;padding-top:8px;color:#2563eb;font-weight:700}
+    .contact{background:#111827;color:#fff}
+    .contact .section-subtitle{color:#cbd5e1}
+    .contact a{color:#93c5fd}
+    footer{text-align:center;padding:22px;background:#0b1120;color:#94a3b8;font-size:14px}
+    @media(max-width:650px){
+      nav{align-items:flex-start;gap:10px;flex-direction:column}
+      nav .links{gap:12px;flex-wrap:wrap}
+      .hero{min-height:70vh;padding-top:55px;padding-bottom:55px}
+      section{padding:55px 6%}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Rohit Kumar</div>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <span class="tag">DATA ANALYST PORTFOLIO</span>
+    <h1>Hi, I'm Rohit Kumar.</h1>
+    <p>I turn data into clear insights using Excel, SQL, Python and Power BI.</p>
+    <a class="btn" href="#projects">View Projects</a>
+    <a class="btn secondary" href="#contact">Contact Me</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-subtitle">Data Analytics • Business Insights • Visualization</p>
+  <p class="about">
+    I am passionate about data analytics and enjoy working with data to find useful
+    patterns, build dashboards and communicate insights clearly. I am continuously
+    improving my analytical and technical skills through practical projects.
+  </p>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <p class="section-subtitle">Tools and technologies</p>
+  <div class="skills">
+    <span class="skill">Excel</span>
+    <span class="skill">SQL</span>
+    <span class="skill">Python</span>
+    <span class="skill">Pandas</span>
+    <span class="skill">Power BI</span>
+    <span class="skill">Data Visualization</span>
+    <span class="skill">Data Cleaning</span>
+    <span class="skill">Data Analysis</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-subtitle">Selected analytics work</p>
+  <div class="grid">
+    <div class="card project">
+      <div>
+        <h3>Customer Churn Analysis</h3>
+        <p>Analyzed customer data to understand churn patterns, identify key factors and present insights through data visualization.</p>
+        <div class="tools">Python • Pandas • Power BI • Data Analysis</div>
+      </div>
+      <a class="button" href="https://github.com/rohitkr6000-lgtm/customer-churn-analysis" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+
+    <div class="card project">
+      <div>
+        <h3>More Projects Coming Soon</h3>
+        <p>New analytics projects and dashboards will be added here as the portfolio grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Let's Connect</h2>
+  <p class="section-subtitle">Interested in data analytics and opportunities? Feel free to connect.</p>
+  <p>GitHub: <a href="https://github.com/rohitkumar-data" target="_blank" rel="noopener">github.com/rohitkumar-data</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/rohit-kumar7171" target="_blank" rel="noopener">linkedin.com/in/rohit-kumar7171</a></p>
+</section>
+
+<footer>
+  © 2026 Rohit Kumar • Data Analyst Portfolio
+</footer>
+
+</body>
+</html>
