@@ -1,1048 +1,903 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Rohit Kumar | Data Analyst</title>
-
-<meta name="description" content="Rohit Kumar - Data Analyst skilled in SQL, Python, Power BI and Excel.">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#07111f;
-    color:#fff;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* NAVBAR */
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#081321;
-    border-bottom:1px solid #23344d;
-}
-
-.navbar{
-    height:70px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:#4da3ff;
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-.nav-links a{
-    color:#b7c2d1;
-    font-weight:bold;
-}
-
-.nav-links a:hover{
-    color:#4da3ff;
-}
-
-.menu{
-    display:none;
-    font-size:30px;
-    cursor:pointer;
-}
-
-/* HERO */
-
-.hero{
-    padding:90px 0;
-}
-
-.hero-content{
-    display:grid;
-    grid-template-columns:1.4fr .6fr;
-    gap:50px;
-    align-items:center;
-}
-
-.hero small{
-    color:#4da3ff;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.hero h1{
-    font-size:55px;
-    margin:10px 0;
-}
-
-.hero h2{
-    color:#4da3ff;
-    font-size:25px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    color:#aeb9c9;
-    font-size:18px;
-    max-width:700px;
-}
-
-.buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:25px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 18px;
-    border-radius:8px;
-    font-weight:bold;
-    border:1px solid #31506f;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-    opacity:.9;
-}
-
-.btn-primary{
-    background:#4da3ff;
-    color:#06101d;
-}
-
-.btn-secondary{
-    background:#101e30;
-    color:#fff;
-}
-
-.profile{
-    width:280px;
-    height:280px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #4da3ff;
-    margin:auto;
-    display:block;
-}
-
-/* SECTIONS */
-
-section{
-    padding:75px 0;
-}
-
-.section-title{
-    font-size:35px;
-    margin-bottom:35px;
-}
-
-.section-title span{
-    color:#4da3ff;
-}
-
-/* STATS */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.stat{
-    background:#0d1a2b;
-    border:1px solid #23344d;
-    padding:22px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.stat h3{
-    color:#4da3ff;
-    margin-bottom:5px;
-}
-
-/* CARDS */
-
-.card{
-    background:#0d1a2b;
-    border:1px solid #23344d;
-    border-radius:14px;
-    padding:28px;
-}
-
-.card p{
-    color:#aeb9c9;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.about-list{
-    list-style:none;
-}
-
-.about-list li{
-    margin:12px 0;
-    color:#b7c2d1;
-}
-
-.about-list li::before{
-    content:"✓";
-    color:#4da3ff;
-    margin-right:10px;
-    font-weight:bold;
-}
-
-/* SKILLS */
-
-.skills{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.skill h3{
-    color:#4da3ff;
-    margin-bottom:8px;
-}
-
-/* EXPERIENCE */
-
-.experience{
-    border-left:4px solid #4da3ff;
-    margin-bottom:20px;
-}
-
-.experience h3{
-    font-size:22px;
-}
-
-.company{
-    color:#4da3ff;
-    font-weight:bold;
-}
-
-.date{
-    color:#8998aa;
-    margin:8px 0 15px;
-}
-
-.experience ul{
-    padding-left:20px;
-    color:#aeb9c9;
-}
-
-.experience li{
-    margin:8px 0;
-}
-
-/* PROJECT */
-
-.project{
-    overflow:hidden;
-}
-
-.project img{
-    width:100%;
-    border-radius:10px;
-    margin-bottom:25px;
-    display:block;
-}
-
-.project h3{
-    font-size:26px;
-}
-
-.tech{
-    color:#4da3ff;
-    font-weight:bold;
-    margin:12px 0;
-}
-
-.insights{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin:25px 0;
-}
-
-.insight{
-    background:#07111f;
-    border:1px solid #23344d;
-    padding:18px;
-    border-radius:10px;
-    color:#aeb9c9;
-}
-
-.insight strong{
-    display:block;
-    color:#4da3ff;
-    font-size:22px;
-    margin-bottom:5px;
-}
-
-/* EDUCATION */
-
-.education{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.education h3{
-    color:#4da3ff;
-    margin-bottom:8px;
-}
-
-.education p{
-    color:#aeb9c9;
-}
-
-/* CERTIFICATIONS */
-
-.certifications{
-    margin-top:20px;
-}
-
-.certifications h3{
-    color:#4da3ff;
-    margin-bottom:12px;
-}
-
-.certifications ul{
-    padding-left:20px;
-}
-
-.certifications li{
-    color:#aeb9c9;
-    margin:10px 0;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-    background:#0d1a2b;
-    border:1px solid #23344d;
-    padding:45px;
-    border-radius:15px;
-}
-
-.contact h2{
-    font-size:40px;
-}
-
-.contact p{
-    color:#aeb9c9;
-    margin:15px 0;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:25px;
-    color:#8998aa;
-    border-top:1px solid #23344d;
-}
-
-/* TABLET */
-
-@media(max-width:800px){
-
-    .nav-links{
-        display:none;
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-        background:#081321;
-        flex-direction:column;
-        padding:20px;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .menu{
-        display:block;
-    }
-
-    .hero-content{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .hero p{
-        margin:auto;
-    }
-
-    .buttons{
-        justify-content:center;
-    }
-
-    .stats,
-    .skills,
-    .education{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .profile{
-        width:220px;
-        height:220px;
-    }
-}
-
-/* MOBILE */
-
-@media(max-width:550px){
-
-    .hero{
-        padding:60px 0;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero h2{
-        font-size:20px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    .stats,
-    .skills,
-    .education,
-    .about-grid,
-    .insights{
-        grid-template-columns:1fr;
-    }
-
-    section{
-        padding:55px 0;
-    }
-
-    .section-title{
-        font-size:30px;
-    }
-
-    .contact{
-        padding:35px 20px;
-    }
-
-    .contact h2{
-        font-size:32px;
-    }
-
-    .btn{
-        width:100%;
-        text-align:center;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Rohit Kumar - Data Analyst Portfolio. Skilled in SQL, Python, Power BI and Excel.">
+
+    <meta name="author" content="Rohit Kumar">
+
+    <title>Rohit Kumar | Data Analyst</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050b18;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #1683ff;
+            filter: blur(180px);
+            opacity: 0.12;
+            top: -150px;
+            left: -150px;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #00d9ff;
+            filter: blur(180px);
+            opacity: 0.08;
+            bottom: -150px;
+            right: -150px;
+            z-index: -1;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+            background: rgba(5, 11, 24, 0.88);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(120, 190, 255, 0.15);
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            height: 100%;
+            margin: auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #4da3ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #d8e6f5;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4da3ff;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: auto;
+            padding: 130px 25px 70px;
+
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #247fc9;
+            border-radius: 30px;
+            color: #59b1ff;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            background: rgba(30, 120, 200, 0.08);
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 78px);
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: #4da3ff;
+        }
+
+        .hero h2 {
+            font-size: clamp(23px, 3vw, 36px);
+            color: #58b4ff;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #aebfd3;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 23px;
+            border-radius: 10px;
+            border: 1px solid #3473a9;
+            background: #0d1c31;
+            color: white;
+            font-weight: 700;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            border-color: #4da3ff;
+            box-shadow: 0 10px 30px rgba(77, 163, 255, 0.18);
+        }
+
+        .btn-primary {
+            background: #4da3ff;
+            color: #03101f;
+            border-color: #4da3ff;
+        }
+
+        .btn-primary:hover {
+            background: #6db7ff;
+        }
+
+        /* =========================
+           PROFILE
+        ========================== */
+
+        .profile-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-ring {
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            padding: 8px;
+
+            background: linear-gradient(
+                135deg,
+                #4da3ff,
+                #0b3f72,
+                #00c6ff
+            );
+
+            box-shadow:
+                0 0 40px rgba(77, 163, 255, 0.25),
+                inset 0 0 30px rgba(0, 0, 0, 0.3);
+
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .profile-ring img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #071224;
+        }
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 100px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title small {
+            color: #4da3ff;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 10px;
+        }
+
+        .section-title p {
+            color: #9eb1c7;
+            margin-top: 12px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-card {
+            background: rgba(14, 29, 48, 0.75);
+            border: 1px solid #214564;
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .about-card p {
+            color: #b6c5d6;
+            font-size: 18px;
+        }
+
+        .about-card strong {
+            color: #ffffff;
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #0c1b2e;
+            border: 1px solid #254966;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            border-color: #4da3ff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .skill-card .icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card h3 {
+            color: #58b4ff;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #9eb1c7;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================== */
+
+        .experience-card {
+            background: #0c1b2e;
+            border: 1px solid #254966;
+            border-radius: 18px;
+            padding: 35px;
+        }
+
+        .experience-card h3 {
+            font-size: 25px;
+            color: #ffffff;
+        }
+
+        .experience-card h4 {
+            color: #4da3ff;
+            margin: 5px 0 15px;
+        }
+
+        .experience-card p {
+            color: #aebfd3;
+        }
+
+        /* =========================
+           PROJECT
+        ========================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #0c1b2e;
+            border: 1px solid #254966;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #4da3ff;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-content h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #aebfd3;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #112b45;
+            color: #67b9ff;
+            border: 1px solid #285a80;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education-card {
+            max-width: 750px;
+            margin: auto;
+            background: #0c1b2e;
+            border: 1px solid #254966;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .education-card h3 {
+            font-size: 28px;
+        }
+
+        .education-card h4 {
+            color: #4da3ff;
+            margin: 8px 0;
+        }
+
+        .education-card p {
+            color: #aebfd3;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(20, 50, 80, 0.9),
+                    rgba(9, 23, 40, 0.95)
+                );
+
+            border: 1px solid #2c5878;
+            border-radius: 25px;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #aebfd3;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            border-top: 1px solid #20384e;
+            padding: 30px 20px;
+            text-align: center;
+            color: #8295aa;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+
+                background: #071222;
+                border-bottom: 1px solid #20384e;
+
+                flex-direction: column;
+                padding: 25px;
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .profile-area {
+                order: -1;
+            }
+
+            .profile-ring {
+                width: 260px;
+                height: 260px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .profile-ring {
+                width: 220px;
+                height: 220px;
+            }
+
+            section {
+                padding: 75px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card,
+            .experience-card {
+                padding: 25px;
+            }
+
+            .contact-box {
+                padding: 45px 20px;
+            }
+
+            .contact-box h2 {
+                font-size: 36px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-<nav>
+    <header>
 
-<div class="container navbar">
+        <nav class="navbar">
 
-<div class="logo">
-Rohit<span>.</span>
-</div>
+            <a href="#home" class="logo">
+                Rohit<span>.</span>
+            </a>
 
-<div class="menu" onclick="toggleMenu()">
-☰
-</div>
+            <ul class="nav-links" id="navLinks">
 
-<ul class="nav-links" id="navLinks">
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-</ul>
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
 
-</div>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-</nav>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
 
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
 
-<!-- HERO -->
+            </ul>
 
-<section class="hero">
+            <div class="menu-btn" id="menuBtn">
+                ☰
+            </div>
 
-<div class="container hero-content">
+        </nav>
 
-<div>
+    </header>
 
-<small>DATA ANALYTICS PORTFOLIO</small>
 
-<h1>Rohit Kumar</h1>
+    <!-- =========================
+         HERO
+    ========================== -->
 
-<h2>
-Data Analyst | SQL | Python | Power BI | Excel
-</h2>
+    <main>
 
-<p>
-I analyze data, build interactive dashboards, identify trends
-and transform raw business data into meaningful insights
-for data-driven decision making.
-</p>
+        <section class="hero" id="home">
 
-<div class="buttons">
+            <div class="hero-content">
 
-<a class="btn btn-primary" href="#projects">
-View Projects
-</a>
+                <span class="badge">
+                    DATA ANALYTICS PORTFOLIO
+                </span>
 
-<a class="btn btn-secondary"
-href="./Rohit_kumar_Data%20Analytics.pdf"
-download>
-Download Resume
-</a>
+                <h1>
+                    Rohit <span>Kumar</span>
+                </h1>
 
-<a class="btn btn-secondary"
-href="https://www.linkedin.com/in/rohit-kumar7171"
-target="_blank">
-LinkedIn
-</a>
+                <h2>
+                    Data Analyst | SQL | Python | Power BI | Excel
+                </h2>
 
-<a class="btn btn-secondary"
-href="https://github.com/Rohitkumar-data"
-target="_blank">
-GitHub
-</a>
+                <p>
+                    I analyze data, build interactive dashboards,
+                    identify trends and transform raw business data
+                    into meaningful insights for data-driven decision making.
+                </p>
 
-</div>
+                <div class="hero-buttons">
 
-</div>
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                    </a>
 
+                    <a href="Rohit_kumar_Data_Analytics.pdf"
+                       class="btn"
+                       download>
+                        Download Resume
+                    </a>
 
-<div>
+                    <a href="https://www.linkedin.com/in/rohit-kumar7171"
+                       target="_blank"
+                       class="btn">
+                        LinkedIn
+                    </a>
 
-<img
-class="profile"
-src="./profile_under_1MB-2jpg.jpeg"
-alt="Rohit Kumar">
+                    <a href="https://github.com/Rohitkumar-data"
+                       target="_blank"
+                       class="btn">
+                        GitHub
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</section>
 
+            <div class="profile-area">
 
-<!-- SKILL HIGHLIGHTS -->
+                <div class="profile-ring">
 
-<section>
+                    <img
+                        src="profile_under_1MB-2jpg.jpeg"
+                        alt="Rohit Kumar"
+                    >
 
-<div class="container">
+                </div>
 
-<div class="stats">
+            </div>
 
-<div class="stat">
-<h3>SQL</h3>
-<p>MySQL • PostgreSQL</p>
-</div>
+        </section>
 
-<div class="stat">
-<h3>Python</h3>
-<p>Pandas • NumPy</p>
-</div>
 
-<div class="stat">
-<h3>Power BI</h3>
-<p>Dashboards • KPI Analysis</p>
-</div>
+        <!-- =========================
+             ABOUT
+        ========================== -->
 
-<div class="stat">
-<h3>Excel</h3>
-<p>Advanced Excel • Power Query</p>
-</div>
+        <section id="about">
 
-</div>
+            <div class="section-title">
 
-</div>
+                <small>ABOUT ME</small>
 
-</section>
+                <h2>Turning Data Into Insights</h2>
 
+                <p>
+                    A data-focused professional passionate about
+                    solving business problems with analytics.
+                </p>
 
-<!-- ABOUT -->
+            </div>
 
-<section id="about">
+            <div class="about-card">
 
-<div class="container">
+                <p>
+                    I am <strong>Rohit Kumar</strong>, a Data Analyst
+                    skilled in SQL, Python, Power BI and Excel.
+                    I enjoy working with data to discover patterns,
+                    create dashboards and communicate actionable insights.
+                </p>
 
-<h2 class="section-title">
-About <span>Me</span>
-</h2>
+                <br>
 
-<div class="about-grid">
+                <p>
+                    My goal is to help organizations make better
+                    business decisions through clean data,
+                    meaningful analysis and effective visualization.
+                </p>
 
-<div class="card">
+            </div>
 
-<p>
-I am a Data Analyst skilled in SQL, Python, Power BI
-and Advanced Excel, with hands-on knowledge of data
-cleaning, EDA, data visualization, KPI analysis
-and dashboard development.
-</p>
+        </section>
 
-<br>
 
-<p>
-I use Pandas and NumPy for data analysis and focus
-on transforming raw data into meaningful business insights.
-</p>
+        <!-- =========================
+             SKILLS
+        ========================== -->
 
-</div>
+        <section id="skills">
 
-<div class="card">
+            <div class="section-title">
 
-<ul class="about-list">
+                <small>MY SKILLS</small>
 
-<li>Data Cleaning & Preparation</li>
-<li>Exploratory Data Analysis</li>
-<li>SQL Data Analysis</li>
-<li>Power BI Dashboard Development</li>
-<li>Excel Reporting & Validation</li>
-<li>KPI & Business Analysis</li>
+                <h2>Technical Skills</h2>
 
-</ul>
+                <p>
+                    Tools and technologies I use for data analytics.
+                </p>
 
-</div>
+            </div>
 
-</div>
 
-</div>
+            <div class="skills-grid">
 
-</section>
+                <div class="skill-card">
 
+                    <div class="icon">🗄️</div>
 
-<!-- SKILLS -->
+                    <h3>SQL</h3>
 
-<section id="skills">
+                    <p>
+                        Data querying, joins,
+                        aggregations and analysis.
+                    </p>
 
-<div class="container">
+                </div>
 
-<h2 class="section-title">
-Technical <span>Skills</span>
-</h2>
 
-<div class="skills">
+                <div class="skill-card">
 
-<div class="card skill">
-<h3>Database & Querying</h3>
-<p>SQL, MySQL, PostgreSQL</p>
-</div>
+                    <div class="icon">🐍</div>
 
-<div class="card skill">
-<h3>Programming</h3>
-<p>Python, Pandas, NumPy</p>
-</div>
+                    <h3>Python</h3>
 
-<div class="card skill">
-<h3>Visualization</h3>
-<p>Power BI, Excel Charts, Dashboards</p>
-</div>
+                    <p>
+                        Pandas, NumPy,
+                        data cleaning and analysis.
+                    </p>
 
-<div class="card skill">
-<h3>Data Preparation</h3>
-<p>Data Cleaning, Power Query, Jupyter Notebook</p>
-</div>
+                </div>
 
-<div class="card skill">
-<h3>Analytics</h3>
-<p>KPI Analysis, Data Reporting, Business Insights</p>
-</div>
 
-<div class="card skill">
-<h3>Tools</h3>
-<p>Advanced Excel, Git, GitHub</p>
-</div>
+                <div class="skill-card">
 
-</div>
+                    <div class="icon">📊</div>
 
-</div>
+                    <h3>Power BI</h3>
 
-</section>
+                    <p>
+                        Interactive dashboards,
+                        DAX and visualization.
+                    </p>
 
+                </div>
 
-<!-- EXPERIENCE -->
 
-<section id="experience">
+                <div class="skill-card">
 
-<div class="container">
+                    <div class="icon">📈</div>
 
-<h2 class="section-title">
-Work <span>Experience</span>
-</h2>
+                    <h3>Excel</h3>
 
-<div class="card experience">
+                    <p>
+                        Data analysis,
+                        formulas and dashboards.
+                    </p>
 
-<h3>Data Analyst</h3>
+                </div>
 
-<div class="company">
-KNBPO Solution Private Limited
-</div>
+            </div>
 
-<div class="date">
-4/10/2025 – 1/3/2026
-</div>
+        </section>
 
-<ul>
 
-<li>
-Analyzed business data to find trends and useful insights.
-</li>
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
 
-<li>
-Cleaned and organized data using SQL, Python and Excel.
-</li>
+        <section id="experience">
 
-<li>
-Used Python and Pandas to analyze datasets.
-</li>
+            <div class="section-title">
 
-<li>
-Created Power BI dashboards to track business KPIs.
-</li>
+                <small>EXPERIENCE</small>
 
-<li>
-Prepared reports and presented data insights to support business decisions.
-</li>
+                <h2>My Experience</h2>
 
-</ul>
+            </div>
 
-</div>
+            <div class="experience-card">
 
-
-<div class="card experience">
-
-<h3>Digital Marketing</h3>
-
-<div class="company">
-UiproCorporationpvt.ltd
-</div>
-
-<div class="date">
-1/10/2024 – 3/9/2025
-</div>
-
-<ul>
-
-<li>
-Managed digital marketing activities and online campaigns.
-</li>
-
-<li>
-Checked campaign performance and prepared reports.
-</li>
-
-<li>
-Used Excel to organize and analyze marketing data.
-</li>
-
-<li>
-Used campaign data to find trends and improve marketing results.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROJECT -->
-
-<section id="projects">
-
-<div class="container">
-
-<h2 class="section-title">
-Featured <span>Project</span>
-</h2>
-
-<div class="card project">
-
-<img
-src="./Customer Churn Analytics Dashboard.jpg"
-alt="Customer Churn Analytics Dashboard">
-
-<h3>
-Customer Churn Analysis
-</h3>
-
-<div class="tech">
-SQL • Python • Pandas • Power BI • Excel
-</div>
-
-<p>
-Analyzed customer data to identify churn and retention
-patterns. Cleaned and prepared data using Python and
-Pandas, used SQL to identify key trends, and created
-an interactive Power BI dashboard to track important KPIs.
-</p>
-
-<div class="insights">
-
-<div class="insight">
-<strong>28.6%</strong>
-Overall Churn Rate
-</div>
-
-<div class="insight">
-<strong>71.4%</strong>
-Retention Rate
-</div>
-
-<div class="insight">
-<strong>6</strong>
-High-Risk Customers
-</div>
-
-</div>
-
-<div class="buttons">
-
-<a
-class="btn btn-primary"
-href="https://github.com/Rohitkumar-data/customer-churn-analysis"
-target="_blank">
-View GitHub Project
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-<div class="container">
-
-<h2 class="section-title">
-Education & <span>Certifications</span>
-</h2>
-
-<div class="education">
-
-<div class="card">
-
-<h3>
-MBA – Data Analytics
-</h3>
-
-<p>
-GLA University
-</p>
-
-<p>
-2023 – 2025
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-BBA – Marketing
-</h3>
-
-<p>
-GLA University
-</p>
-
-<p>
-2020 – 2023
-</p>
-
-</div>
-
-</div>
-
-<div class="card certifications">
-
-<h3>
-Certifications
-</h3>
-
-<ul>
-
-<li>
-Data Analysis with Python (DA0101EN) — IBM
-</li>
-
-<li>
-Fundamentals of Analytics on AWS – Part 1
-</li>
-
-<li>
-Data to Dashboard in Power BI
-</li>
-
-<li>
-Google Digital Marketing
-</li>
-
-<li>
-Digital Marketing — UIPRO
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<div class="contact">
-
-<h2>
-Let's Connect
-</h2>
-
-<p>
-Open to Data Analyst opportunities and analytics-focused roles.
-</p>
-
-<div class="buttons">
-
-<a
-class="btn btn-primary"
-href="mailto:rohitkr6000@gmail.com">
-Email Me
-</a>
-
-<a
-class="btn btn-secondary"
-href="tel:+917256977918">
-Call Me
-</a>
-
-<a
-class="btn btn-secondary"
-href="https://www.linkedin.com/in/rohit-kumar7171"
-target="_blank">
-LinkedIn
-</a>
-
-<a
-class="btn btn-secondary"
-href="https://github.com/Rohitkumar-data"
-target="_blank">
-GitHub
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 Rohit Kumar | Data Analyst Portfolio
-
-</footer>
-
-
-<script>
-
-function toggleMenu(){
-
-document
-.getElementById("navLinks")
-.classList.toggle("active");
-
-}
-
-document.querySelectorAll(".nav-links a").forEach(function(link){
-
-link.addEventListener("click",function(){
-
-document
-.getElementById("navLinks")
-.classList.remove("active");
-
-});
-
-});
-
-</script>
-
-</body>
-</html>
+                <h3>
+                    Data Analytic
