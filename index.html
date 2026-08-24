@@ -86,4 +86,729 @@ margin:10px 0
 
 .hero h2{
 color:#4da3ff;
-font-size:25px
+font-size:25px;
+margin-bottom:20px
+}
+
+.hero p{
+color:#aeb9c9;
+font-size:18px;
+max-width:700px
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:25px
+}
+
+.btn{
+padding:12px 18px;
+border-radius:8px;
+font-weight:bold;
+border:1px solid #31506f
+}
+
+.btn-primary{
+background:#4da3ff;
+color:#06101d
+}
+
+.btn-secondary{
+background:#101e30;
+color:white
+}
+
+.profile{
+width:280px;
+height:280px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #4da3ff;
+margin:auto
+}
+
+section{padding:75px 0}
+
+.section-title{
+font-size:35px;
+margin-bottom:35px
+}
+
+.section-title span{color:#4da3ff}
+
+.card{
+background:#0d1a2b;
+border:1px solid #23344d;
+border-radius:14px;
+padding:28px
+}
+
+.card p{color:#aeb9c9}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
+}
+
+.stat{
+background:#0d1a2b;
+border:1px solid #23344d;
+padding:22px;
+border-radius:12px;
+text-align:center
+}
+
+.stat h3{color:#4da3ff}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
+}
+
+.about-list{
+list-style:none
+}
+
+.about-list li{
+margin:12px 0;
+color:#b7c2d1
+}
+
+.about-list li::before{
+content:"✓";
+color:#4da3ff;
+margin-right:10px;
+font-weight:bold
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.skill h3{
+color:#4da3ff;
+margin-bottom:8px
+}
+
+.experience{
+border-left:4px solid #4da3ff;
+margin-bottom:20px
+}
+
+.experience h3{font-size:22px}
+
+.company{
+color:#4da3ff;
+font-weight:bold
+}
+
+.date{
+color:#8998aa;
+margin:8px 0 15px
+}
+
+.experience ul{
+padding-left:20px;
+color:#aeb9c9
+}
+
+.project{overflow:hidden}
+
+.project img{
+width:100%;
+border-radius:10px;
+margin-bottom:25px
+}
+
+.project h3{font-size:26px}
+
+.tech{
+color:#4da3ff;
+font-weight:bold;
+margin:12px 0
+}
+
+.insights{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin:25px 0
+}
+
+.insight{
+background:#07111f;
+border:1px solid #23344d;
+padding:18px;
+border-radius:10px;
+color:#aeb9c9
+}
+
+.insight strong{
+display:block;
+color:#4da3ff;
+font-size:22px
+}
+
+.education{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
+}
+
+.education h3{color:#4da3ff}
+
+.certifications li{
+color:#aeb9c9;
+margin:10px 0
+}
+
+.contact{
+text-align:center;
+background:#0d1a2b;
+border:1px solid #23344d;
+padding:45px;
+border-radius:15px
+}
+
+.contact p{
+color:#aeb9c9;
+margin:15px 0
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#8998aa;
+border-top:1px solid #23344d
+}
+
+@media(max-width:800px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#081321;
+flex-direction:column;
+padding:20px
+}
+
+.nav-links.active{display:flex}
+
+.menu{display:block}
+
+.hero-content{
+grid-template-columns:1fr;
+text-align:center
+}
+
+.hero p{margin:auto}
+
+.buttons{justify-content:center}
+
+.stats,
+.skills,
+.education{
+grid-template-columns:1fr 1fr
+}
+
+.profile{
+width:220px;
+height:220px
+}
+}
+
+@media(max-width:550px){
+
+.hero h1{font-size:40px}
+
+.hero h2{font-size:20px}
+
+.stats,
+.skills,
+.education,
+.about-grid,
+.insights{
+grid-template-columns:1fr
+}
+
+section{padding:55px 0}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container navbar">
+
+<div class="logo">Rohit<span>.</span></div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div>
+
+<small>DATA ANALYTICS PORTFOLIO</small>
+
+<h1>Rohit Kumar</h1>
+
+<h2>Data Analyst | SQL | Python | Power BI | Excel</h2>
+
+<p>
+I analyze data, build interactive dashboards, identify trends
+and transform raw business data into meaningful insights
+for data-driven decision making.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="#projects">
+View Projects
+</a>
+
+<a class="btn btn-secondary"
+href="Rohit_Kumar_Resume.pdf"
+download>
+Download Resume
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.linkedin.com/in/rohit-kumar7171"
+target="_blank">
+LinkedIn
+</a>
+
+<a class="btn btn-secondary"
+href="https://github.com/Rohitkumar-data"
+target="_blank">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+<div>
+
+<img
+class="profile"
+src="profile_under_1MB-2jpg.jpeg"
+alt="Rohit Kumar">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+<h3>SQL</h3>
+<p>MySQL • PostgreSQL</p>
+</div>
+
+<div class="stat">
+<h3>Python</h3>
+<p>Pandas • NumPy</p>
+</div>
+
+<div class="stat">
+<h3>Power BI</h3>
+<p>Dashboards • KPI Analysis</p>
+</div>
+
+<div class="stat">
+<h3>Excel</h3>
+<p>Advanced Excel • Power Query</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About <span>Me</span>
+</h2>
+
+<div class="about-grid">
+
+<div class="card">
+
+<p>
+I am a Data Analyst skilled in SQL, Python, Power BI
+and Advanced Excel, with hands-on knowledge of data
+cleaning, EDA, data visualization, KPI analysis
+and dashboard development.
+</p>
+
+<br>
+
+<p>
+I use Pandas and NumPy for data analysis and focus
+on transforming raw data into meaningful business insights.
+</p>
+
+</div>
+
+<div class="card">
+
+<ul class="about-list">
+
+<li>Data Cleaning & Preparation</li>
+<li>Exploratory Data Analysis</li>
+<li>SQL Data Analysis</li>
+<li>Power BI Dashboard Development</li>
+<li>Excel Reporting & Validation</li>
+<li>KPI & Business Analysis</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+Technical <span>Skills</span>
+</h2>
+
+<div class="skills">
+
+<div class="card skill">
+<h3>Database & Querying</h3>
+<p>SQL, MySQL, PostgreSQL</p>
+</div>
+
+<div class="card skill">
+<h3>Programming</h3>
+<p>Python, Pandas, NumPy</p>
+</div>
+
+<div class="card skill">
+<h3>Visualization</h3>
+<p>Power BI, Excel Charts, Dashboards</p>
+</div>
+
+<div class="card skill">
+<h3>Data Preparation</h3>
+<p>Data Cleaning, Power Query, Jupyter Notebook</p>
+</div>
+
+<div class="card skill">
+<h3>Analytics</h3>
+<p>KPI Analysis, Data Reporting, Business Insights</p>
+</div>
+
+<div class="card skill">
+<h3>Tools</h3>
+<p>Advanced Excel, Git, GitHub</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">
+Work <span>Experience</span>
+</h2>
+
+<div class="card experience">
+
+<h3>Data Analyst</h3>
+
+<div class="company">
+KNBPO Solution Private Limited
+</div>
+
+<div class="date">
+4/10/2025 – 1/3/2026
+</div>
+
+<ul>
+
+<li>Analyzed business data to find trends and useful insights.</li>
+
+<li>Cleaned and organized data using SQL, Python and Excel.</li>
+
+<li>Used Python and Pandas to analyze datasets.</li>
+
+<li>Created Power BI dashboards to track business KPIs.</li>
+
+<li>Prepared reports and presented data insights to support business decisions.</li>
+
+</ul>
+
+</div>
+
+<div class="card experience">
+
+<h3>Digital Marketing</h3>
+
+<div class="company">
+UiproCorporationpvt.ltd
+</div>
+
+<div class="date">
+1/10/2024 – 3/9/2025
+</div>
+
+<ul>
+
+<li>Managed digital marketing activities and online campaigns.</li>
+
+<li>Checked campaign performance and prepared reports.</li>
+
+<li>Used Excel to organize and analyze marketing data.</li>
+
+<li>Used campaign data to find trends and improve marketing results.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+Featured <span>Project</span>
+</h2>
+
+<div class="card project">
+
+<img
+src="Customer Churn Analytics Dashboard.jpg"
+alt="Customer Churn Dashboard">
+
+<h3>Customer Churn Analysis</h3>
+
+<div class="tech">
+SQL • Python • Pandas • Power BI • Excel
+</div>
+
+<p>
+Analyzed customer data to identify churn and retention
+patterns. Cleaned and prepared data using Python and
+Pandas, used SQL to identify key trends, and created
+an interactive Power BI dashboard to track important KPIs.
+</p>
+
+<div class="insights">
+
+<div class="insight">
+<strong>28.6%</strong>
+Overall Churn Rate
+</div>
+
+<div class="insight">
+<strong>71.4%</strong>
+Retention Rate
+</div>
+
+<div class="insight">
+<strong>6</strong>
+High-Risk Customers
+</div>
+
+</div>
+
+<div class="buttons">
+
+<a
+class="btn btn-primary"
+href="https://github.com/Rohitkumar-data/customer-churn-analysis"
+target="_blank">
+View GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title">
+Education & <span>Certifications</span>
+</h2>
+
+<div class="education">
+
+<div class="card">
+
+<h3>MBA – Data Analytics</h3>
+
+<p>GLA University</p>
+
+<p>2023 – 2025</p>
+
+</div>
+
+<div class="card">
+
+<h3>BBA – Marketing</h3>
+
+<p>GLA University</p>
+
+<p>2020 – 2023</p>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="card certifications">
+
+<h3>Certifications</h3>
+
+<ul>
+
+<li>Data Analysis with Python (DA0101EN) — IBM</li>
+
+<li>Fundamentals of Analytics on AWS – Part 1</li>
+
+<li>Data to Dashboard in Power BI</li>
+
+<li>Google Digital Marketing</li>
+
+<li>Digital Marketing — UIPRO</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<h2>Let's Connect</h2>
+
+<p>
+Open to Data Analyst opportunities and analytics-focused roles.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-primary"
+href="mailto:rohitkr6000@gmail.com">
+Email
+</a>
+
+<a
+class="btn btn-secondary"
+href="tel:+917256977918">
+Phone
+</a>
+
+<a
+class="btn btn-secondary"
+href="https://www.linkedin.com/in/rohit-kumar7171"
+target="_blank">
+LinkedIn
+</a>
+
+<a
+class="btn btn-secondary"
+href="https://github.com/Rohitkumar-data"
+target="_blank">
+GitHub
+</a>
+
+<a
+class="btn btn-secondary"
+href="Rohit_Kumar_Resume.pdf"
+download>
+Resume
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Rohit Kumar | Data Analyst Portfolio
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
