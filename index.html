@@ -6,8 +6,7 @@
 
 <title>Rohit Kumar | Data Analyst</title>
 
-<meta name="description"
-content="Rohit Kumar - Data Analyst skilled in SQL, Python, Power BI and Excel.">
+<meta name="description" content="Rohit Kumar - Data Analyst skilled in SQL, Python, Power BI and Excel.">
 
 <style>
 
@@ -19,9 +18,9 @@ content="Rohit Kumar - Data Analyst skilled in SQL, Python, Power BI and Excel."
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#07111f;
-    color:#ffffff;
+    color:#fff;
     line-height:1.6;
 }
 
@@ -147,7 +146,7 @@ nav{
 
 .btn-secondary{
     background:#101e30;
-    color:white;
+    color:#fff;
 }
 
 .profile{
@@ -175,19 +174,6 @@ section{
     color:#4da3ff;
 }
 
-/* CARDS */
-
-.card{
-    background:#0d1a2b;
-    border:1px solid #23344d;
-    border-radius:14px;
-    padding:28px;
-}
-
-.card p{
-    color:#aeb9c9;
-}
-
 /* STATS */
 
 .stats{
@@ -206,6 +192,20 @@ section{
 
 .stat h3{
     color:#4da3ff;
+    margin-bottom:5px;
+}
+
+/* CARDS */
+
+.card{
+    background:#0d1a2b;
+    border:1px solid #23344d;
+    border-radius:14px;
+    padding:28px;
+}
+
+.card p{
+    color:#aeb9c9;
 }
 
 /* ABOUT */
@@ -271,6 +271,10 @@ section{
     color:#aeb9c9;
 }
 
+.experience li{
+    margin:8px 0;
+}
+
 /* PROJECT */
 
 .project{
@@ -313,6 +317,7 @@ section{
     display:block;
     color:#4da3ff;
     font-size:22px;
+    margin-bottom:5px;
 }
 
 /* EDUCATION */
@@ -325,6 +330,26 @@ section{
 
 .education h3{
     color:#4da3ff;
+    margin-bottom:8px;
+}
+
+.education p{
+    color:#aeb9c9;
+}
+
+/* CERTIFICATIONS */
+
+.certifications{
+    margin-top:20px;
+}
+
+.certifications h3{
+    color:#4da3ff;
+    margin-bottom:12px;
+}
+
+.certifications ul{
+    padding-left:20px;
 }
 
 .certifications li{
@@ -623,7 +648,6 @@ on transforming raw data into meaningful business insights.
 
 </div>
 
-
 <div class="card">
 
 <ul class="about-list">
@@ -704,7 +728,6 @@ Technical <span>Skills</span>
 <h2 class="section-title">
 Work <span>Experience</span>
 </h2>
-
 
 <div class="card experience">
 
@@ -800,7 +823,6 @@ Featured <span>Project</span>
 src="./Customer Churn Analytics Dashboard.jpg"
 alt="Customer Churn Analytics Dashboard">
 
-
 <h3>
 Customer Churn Analysis
 </h3>
@@ -815,7 +837,6 @@ patterns. Cleaned and prepared data using Python and
 Pandas, used SQL to identify key trends, and created
 an interactive Power BI dashboard to track important KPIs.
 </p>
-
 
 <div class="insights">
 
@@ -836,16 +857,13 @@ High-Risk Customers
 
 </div>
 
-
 <div class="buttons">
 
 <a
 class="btn btn-primary"
 href="https://github.com/Rohitkumar-data/customer-churn-analysis"
 target="_blank">
-
-View GitHub
-
+View GitHub Project
 </a>
 
 </div>
@@ -867,7 +885,6 @@ View GitHub
 Education & <span>Certifications</span>
 </h2>
 
-
 <div class="education">
 
 <div class="card">
@@ -886,7 +903,6 @@ GLA University
 
 </div>
 
-
 <div class="card">
 
 <h3>
@@ -904,10 +920,6 @@ GLA University
 </div>
 
 </div>
-
-
-<br>
-
 
 <div class="card certifications">
 
@@ -962,7 +974,6 @@ Let's Connect
 Open to Data Analyst opportunities and analytics-focused roles.
 </p>
 
-
 <div class="buttons">
 
 <a
@@ -971,13 +982,11 @@ href="mailto:rohitkr6000@gmail.com">
 Email Me
 </a>
 
-
 <a
 class="btn btn-secondary"
 href="tel:+917256977918">
 Call Me
 </a>
-
 
 <a
 class="btn btn-secondary"
@@ -985,7 +994,6 @@ href="https://www.linkedin.com/in/rohit-kumar7171"
 target="_blank">
 LinkedIn
 </a>
-
 
 <a
 class="btn btn-secondary"
@@ -1021,6 +1029,18 @@ document
 .classList.toggle("active");
 
 }
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document
+.getElementById("navLinks")
+.classList.remove("active");
+
+});
+
+});
 
 </script>
 
